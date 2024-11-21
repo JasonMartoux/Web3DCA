@@ -1,6 +1,6 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import DCACalculator from '../components/DCACalculator.astro';
+import Layout from "../layouts/Layout.astro";
+import ThirdwebProviderWrapper from "../components/ThirdwebProviderWrapper.jsx";
 ---
 
 <Layout title="Calculateur DCA | Investissement régulier">
@@ -10,16 +10,28 @@ import DCACalculator from '../components/DCACalculator.astro';
         Calculateur d'Investissement DCA
       </h1>
       <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
-        Simulez vos investissements réguliers avec la stratégie du Dollar Cost Averaging.
-        Réduisez l'impact de la volatilité et investissez de manière plus sereine.
+        Simulez vos investissements réguliers avec la stratégie du Dollar Cost
+        Averaging. Réduisez l'impact de la volatilité et investissez de manière
+        plus sereine.
       </p>
-      <DCACalculator />
+      <ThirdwebProviderWrapper client:only="react" />
     </div>
   </main>
-</Layout>
 
-<style>
-  main {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  }
-</style>
+  <style>
+    main {
+      font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Roboto,
+        Oxygen,
+        Ubuntu,
+        Cantarell,
+        "Open Sans",
+        "Helvetica Neue",
+        sans-serif;
+    }
+  </style>
+</Layout>
